@@ -7,4 +7,7 @@ description: A simple MOTD plugin
 commands:
   motd:
     description: Show the message of the day
-    usage: "/motd and that's it."
+    usage: /motd
+  first:
+    description: Show the message that newbies get on their first join
+    usage: /first

@@ -10,7 +10,5 @@ import org.junit.jupiter.api.Test;
 public class WelcomePluginTest {
 
   @Test
-  public void onEnable() {
-
-  }
+  public void onEnable() {}
 }
