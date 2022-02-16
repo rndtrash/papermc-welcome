@@ -1,4 +1,7 @@
-motd: Testing, testing, ahem...
+motd: |-
+    Testing, testing, ahem...
 newbie:
-    local: Welcome, {u}! Please, download this resource pack.
-    global: {u} plays here for the first time! Say hi!
+    local: |-
+        Welcome, {u}! Please, download this resource pack.
+    global: |-
+        {u} plays here for the first time! Say hi!
