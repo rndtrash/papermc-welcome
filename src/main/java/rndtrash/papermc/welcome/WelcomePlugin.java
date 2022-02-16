@@ -50,8 +50,8 @@ public class WelcomePlugin extends JavaPlugin
 		OfflinePlayer offlinePlayer = Bukkit.getOfflinePlayer(player.getName());
 		if (offlinePlayer.hasPlayedBefore())
 		{
-			Bukkit.broadcastMessage(NewbieGlobal.replace("{u}", player.getName());
-			player.chat(NewbieLocal.replace("{u}", player.getName());
+			Bukkit.broadcastMessage(NewbieGlobal.replace("{u}", player.getName()));
+			player.chat(NewbieLocal.replace("{u}", player.getName()));
 		}
 	}
 	
