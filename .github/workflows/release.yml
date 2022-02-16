@@ -85,8 +85,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ${{ github.workspace }}/build/libs/ExamplePlugin.jar
-          asset_name: ExamplePlugin.jar
+          asset_path: ${{ github.workspace }}/build/libs/WelcomePlugin.jar
+          asset_name: WelcomePlugin.jar
           asset_content_type: application/java-archive
 
   bump-version:
@@ -109,12 +109,12 @@ jobs:
         if: ${{ env.PR_PAT != null }}
         uses: peter-evans/create-pull-request@v3
         with:
-          assignees: leviem1
-          author: Levi Muniz <levi.muniz17@gmail.com>
+          assignees: rndtrash
+          author: Ivan Kuzmenko <6745157+rndtrash@users.noreply.github.com>
           base: main
           body: Bumps the project's Gradle version in version.txt
           branch: bump-version
-          committer: Levi Muniz <levi.muniz17@gmail.com>
+          committer: Ivan Kuzmenko <6745157+rndtrash@users.noreply.github.com>
           commit-message: Bump project version
           delete-branch: true
           labels: enhancement, low priority

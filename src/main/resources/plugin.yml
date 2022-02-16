@@ -1,20 +1,10 @@
 main: ${PACKAGE}.${NAME}
 name: ${NAME}
 version: "${VERSION}"
-api-version: "1.16"
-author: AUTHOR
-description: DESCRIPTION
+api-version: "1.18"
+author: rndtrash
+description: A simple MOTD plugin
 commands:
-  ex:
-    description: Base command for EXAMPLE
-    usage: "For a list of commands, type /ex help"
-    aliases: example
-permissions:
-  example.test:
-    description: DESCRIPTION
-    default: true
-  example.*:
-    description: Grants all other permissions
-    default: false
-    children:
-      example.test: true
+  motd:
+    description: Show the message of the day
+    usage: "/motd and that's it."

@@ -8,7 +8,7 @@ plugins {
     id 'java'
 }
 
-group = "rndtrash.welcome"
+group = "rndtrash.papermc.welcome"
 
 static def getTime() {
     SimpleDateFormat sdf = new SimpleDateFormat("yyMMdd-HHmm")
