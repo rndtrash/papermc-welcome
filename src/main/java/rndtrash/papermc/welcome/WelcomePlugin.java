@@ -7,6 +7,7 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
+import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -15,7 +16,7 @@ import org.bukkit.plugin.java.JavaPlugin;
  *
  * @author Copyright (c) 2022 Ivan Kuzmenko.
  */
-public class WelcomePlugin extends JavaPlugin {
+public class WelcomePlugin extends JavaPlugin implements Listener {
   protected String motd;
   protected String newbieLocal;
   protected String newbieGlobal;
@@ -29,6 +30,8 @@ public class WelcomePlugin extends JavaPlugin {
     motd = getConfig().getString("motd", "");
     newbieLocal = getConfig().getString("newbie.local", "");
     newbieGlobal = getConfig().getString("newbie.global", "");
+
+    getServer().getPluginManager().registerEvents(this, this);
   }
 
   /**
@@ -73,6 +76,6 @@ public class WelcomePlugin extends JavaPlugin {
    * Say the welcome message.
    */
   public void welcomeNewbie(Player p) {
-    p.chat(newbieLocal.replace("{u}", p.getName()));
+    p.sendMessage(newbieLocal.replace("{u}", p.getName()));
   }
 }
